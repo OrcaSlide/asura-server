@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import Title from "./componente/demo";
-import "./stylesheets/index.scss";
+import "./stylesheets/Main.scss";
 
 ReactDOM.hydrate(
     <Title title="genial" />,
