@@ -1,0 +1,7 @@
+#=======================================================#
+# Reglas para ignorar archivos o carpetas               #
+#=======================================================#
+/node_modules
+/dist/js
+/dist/css
+yarn.*
