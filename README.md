@@ -15,9 +15,6 @@ Server for Orcaslide development projects
 * Babel
 * React
 
-JS: Konami12
-Styles: Kolibri
-
 ### Commands
 
 * build:dev
@@ -25,4 +22,7 @@ Styles: Kolibri
 * build:prod
 * start:dev
 * start:prod
+
+JS: Konami12
+Styles: Kolibri
 
