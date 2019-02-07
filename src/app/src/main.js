@@ -4,6 +4,6 @@ import Title from "./componente/demo";
 import "./stylesheets/Main.scss";
 
 ReactDOM.hydrate(
-    <Title title="genial" />,
+    <Title title="genialc" />,
     document.getElementById("app"),
 );

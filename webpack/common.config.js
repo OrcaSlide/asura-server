@@ -8,16 +8,19 @@
  */
 const PATH = require("path");
 const EXTRACT_TEXT_PLUGIN = require("extract-text-webpack-plugin");
+const ROOT_FOLDER = PATH.resolve(__dirname, "../");
 const WEBPACK = require("webpack");
-const MANIFEST = require("../src/app/assets/js/modules-manifest.json");
+const MANIFEST = require("../src/app/assets/dll/brahma-manifest.json");
 
 const COMMON_CONFIG = {
     entry: {
         main: PATH.resolve(__dirname, "../src/app/src/main.js"),
     },
     output: {
-        path: PATH.resolve(__dirname, "../src/app/assets/js"),
         filename: "[name].js",
+        path: `${ROOT_FOLDER}/dist/`,
+        publicPath: "/dist/",
+        pathinfo: true,
     },
     module: {
         rules: [
@@ -59,7 +62,7 @@ const COMMON_CONFIG = {
         ],
     },
     plugins: [
-        new EXTRACT_TEXT_PLUGIN({ filename: "../css/[name].css" }),
+        new EXTRACT_TEXT_PLUGIN({ filename: "[name].css" }),
         new WEBPACK.DllReferencePlugin({
             manifest: MANIFEST, // se importa el manifiesto
         }),
