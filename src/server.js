@@ -2,6 +2,7 @@
 import Express from "express";
 import Path from "path";
 import webpack from "webpack";
+import browserSync from "browser-sync";
 import webpackDevMiddleware from "webpack-dev-middleware";
 import webpackHotMiddleware from "webpack-hot-middleware";
 
@@ -17,7 +18,8 @@ const APP = Express();
 const ASSETS = Path.join(__dirname, assets);
 const VIEWS = Path.join(__dirname, views);
 const COMPILER = webpack(webpackConfig());
-
+const ROOT_FOLDER = Path.resolve(__dirname, "./");
+console.log(ROOT_FOLDER);
 /**
  * Transpilacion dinamica de webpack.
  */
@@ -44,6 +46,16 @@ APP.listen(port, domain, (error) => {
     if (error) {
         process.exit(1);
     } else {
+        browserSync({
+            files: [
+                `${ROOT_FOLDER}/app/**/*.{js,scss,html}`,
+            ],
+            online: true,
+            open: false,
+            port: port + 1,
+            proxy: 'localhost:' + port,
+            ui: false
+        });
         console.log("Servidor listo");
     }
 });
