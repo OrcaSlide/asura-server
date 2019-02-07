@@ -25,13 +25,13 @@ const CONFIG = {
     mode: "production",
     output: {
         filename: "[name].js",
-        path: `${ROOT_FOLDER}/dll/`,
+        path: `${ROOT_FOLDER}/src/app/assets/dll`,
         library: "brahma",
     },
     plugins: [
         new WEBPACK.DllPlugin({
             name: "brahma",
-            path: `${ROOT_FOLDER}/dll/brahma-manifest.json`,
+            path: `${ROOT_FOLDER}/src/app/assets/dll/brahma-manifest.json`,
         }),
     ],
 };

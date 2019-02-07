@@ -10,7 +10,7 @@ const PATH = require("path");
 const EXTRACT_TEXT_PLUGIN = require("extract-text-webpack-plugin");
 const ROOT_FOLDER = PATH.resolve(__dirname, "../");
 const WEBPACK = require("webpack");
-const MANIFEST = require("../dll/brahma-manifest.json");
+const MANIFEST = require("../src/app/assets/dll/brahma-manifest.json");
 
 const COMMON_CONFIG = {
     entry: {
