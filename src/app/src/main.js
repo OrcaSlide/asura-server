@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Title from "./components/demo";
+import Welcome from "./components/welcome";
 import "./stylesheets/Main.scss";
 
 ReactDOM.hydrate(
-    <Title title="genialc" />,
+    <Welcome />,
     document.getElementById("app"),
 );

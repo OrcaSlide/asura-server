@@ -1,3 +1,18 @@
+// Main File Sass
+
+// Google Font
+
+@import url('https://fonts.googleapis.com/css?family=Staatliches');
+
 body {
-    background: yellow;
+    background: #8eafd8;
+    font-family: 'Staatliches', cursive;
+    color: #6a86a9;
+    display: flex;
+    align-content: center;
+    justify-content: center;
 }
+
+// Call to Components
+
+@import './components/Components';
