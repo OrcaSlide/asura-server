@@ -24,5 +24,5 @@ Server for Orcaslide development projects
 * start:prod
 
 JS: Konami12
-Styles: Kolibri
+SCSS: Kolibri
 

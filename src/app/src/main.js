@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Title from "./componente/demo";
+import Title from "./components/demo";
 import "./stylesheets/Main.scss";
 
 ReactDOM.hydrate(
