@@ -9,6 +9,8 @@
 const PATH = require("path");
 const WEBPACK = require("webpack");
 
+const ROOT_FOLDER = PATH.resolve(__dirname, "../");
+
 /**
  * Inicio de configuracion.
  */
@@ -20,15 +22,16 @@ const CONFIG = {
             "prop-types",
         ],
     },
+    mode: "production",
     output: {
-        path: PATH.resolve(__dirname, "../src/app/assets/js"),
         filename: "[name].js",
+        path: `${ROOT_FOLDER}/dll/`,
         library: "brahma",
     },
     plugins: [
         new WEBPACK.DllPlugin({
             name: "brahma",
-            path: PATH.join(__dirname, "../src/app/assets/js/[name]-manifest.json"),
+            path: `${ROOT_FOLDER}/dll/brahma-manifest.json`,
         }),
     ],
 };
