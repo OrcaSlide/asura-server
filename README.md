@@ -1,6 +1,6 @@
 # Asura Server
 
-### v0.0.0 
+### v0.0.1 
 
 Server for Orcaslide development projects
 
@@ -15,4 +15,14 @@ Server for Orcaslide development projects
 * Babel
 * React
 
-Konami12
+### Commands
+
+* build:dev
+* build:dll
+* build:prod
+* start:dev
+* start:prod
+
+JS: Konami12
+SCSS: Kolibri
+
